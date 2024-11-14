@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Occurence_char_in_string
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the string : ");
+            string str=Console.ReadLine().ToLower();
+            
+            Dictionary<char,int> charcount= new Dictionary<char,int>();
+            foreach(var character in str)
+            {
+                if(character!=' ')
+                {
+                    if(charcount.ContainsKey(character))
+                    {
+                        charcount[character]++;
+                    }
+                    else
+                    {
+                        charcount[character]=1;
+                    }
+                }
+            }
+            foreach(var character in charcount)
+            {
+                Console.WriteLine("{0} = {1} times",character.Key,character.Value);
+            }
+        }
+    }
+}
