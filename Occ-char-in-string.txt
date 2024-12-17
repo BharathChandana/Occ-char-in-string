@@ -30,7 +30,7 @@ namespace Occurence_char_in_string
             }
             foreach(var character in charcount)
             {
-                Console.WriteLine("{0} = {1} times",character.Key,character.Value);
+                Console.WriteLine($"{character.Key} = {character.Value} times");
             }
         }
     }
